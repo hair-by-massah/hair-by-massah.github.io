@@ -27,7 +27,9 @@ url: "https://www.hairbymassah.com/" # the base hostname & protocol for your sit
 # twitter_username: jekyllrb
 # github_username:  jekyll
 header_pages:
-- appointments.md
+- braiding.md
+- weaves.md
+- twists-locks.md
 
 # Build settings
 theme: minima
