@@ -1,0 +1,105 @@
+#homepage {
+    padding-bottom: 0;
+}
+
+#home-intro-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+#home-intro-pic {
+    width: 100%;
+    img {
+        border-radius: 5px;
+        width: 100%;
+    }
+}
+
+/** Offerings **/ 
+#home-offerings-section {
+    position: relative;
+    background-image: url(/images/offerings_bg_mobile.jpg); 
+    background-attachment: fixed;
+    &::before {
+        content: '';
+        display: block;
+        background-color: darken($brand-gray, 10%);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .6;
+        z-index: 1;
+    }
+    @media only screen and (min-width: 1200px) {
+        background-image: url(/images/offerings_bg_desktop.jpg); 
+    }
+    margin-top: 4rem;
+    padding: 7rem 0 6rem;
+    h2 {
+        z-index: 100;
+        position: relative;
+        text-align: center;
+        color: $brand-color;
+        font-size: 2.5rem;     
+        @media only screen and (min-width: 600px) {
+            font-size: 3rem;     
+        }
+    }
+}
+#offerings {
+    position: relative;
+    z-index: 100;
+    padding: 1rem;
+    @media only screen and (min-width: 600px) {
+        max-width: 80%;
+    }
+    @media only screen and (min-width: 1200px) {
+        max-width: 1200px;
+        padding: 2rem 3rem 3rem;
+    }
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &.wrapper {
+        &::after {
+            display: none;
+        }
+    }
+}
+.offering-card {
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    padding: 2rem;
+    @media only screen and (min-width: 1200px) {
+        padding: 3rem 2rem;
+    }    
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: lighten($brand-color, 20%);
+    h3 {
+        @media only screen and (min-width: 1200px) {
+            font-size: 1.7rem;
+            margin-bottom: 1.25rem;
+        }          
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.4rem;
+        color: #080705;
+        line-height: 1;
+    }
+    margin-bottom: 1.5rem;
+}
+@media only screen and (min-width: 1000px) {
+    #home-intro-text {
+        padding: 0 0 0 2rem;
+        flex: 1;
+    }
+    #home-intro-pic {
+        max-width: 300px;
+    }
+    .offering-card {
+        flex: 1;
+        max-width: 32%;
+        margin-bottom: 0;
+    }        
+}
