@@ -1,20 +1,22 @@
 $heading-size-ratio: 2.25;
-.im-fell english sc-regular, .site-title, .footer-heading, .site-footer a, .page-link, #contact-form label, h2, h3 {
-    font-family: "IM Fell English SC", serif;
-    font-weight: 400;
+body {
+    font-family: "SUSE", system-ui;
+    font-optical-sizing: auto;
     font-style: normal;
 }
 
-.im-fell english-regular, #contact-form-button {
-    font-family: "IM Fell English", serif;
+.rowdies-regular,
+.site-title,
+.page-link,
+.footer-heading,
+.site-footer a,
+#contact-form label,
+h1,
+h2,
+h3 {
+    font-family: "Rowdies", system-ui;
     font-weight: 400;
     font-style: normal;
-}
-
-.im-fell english-regular-italic {
-    font-family: "IM Fell English", serif;
-    font-weight: 400;
-    font-style: italic;
 }
 
 p em {
@@ -24,4 +26,43 @@ p em {
 h2 {
     line-height: 1;
     margin-bottom: 2rem;
+}
+
+.site-header {
+    .site-title {
+        line-height: 1;
+        letter-spacing: 1px;
+        span {
+            display: block;
+            font-size: 0.7em;
+            font-weight: 100;
+            letter-spacing: 1px;
+        }
+    }
+    .page-link {
+        letter-spacing: 1px;
+        color: $brand-color;
+        font-size: 1.3rem;
+    
+        &:hover {
+          color: white;
+        }
+    
+        line-height: $base-line-height;
+    
+        // Gaps between nav items, but not on the last one
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+}
+.footer-heading {
+    line-height: 1;
+    letter-spacing: 1px;
+    span {
+        display: block;
+        font-size: 0.7em;
+        font-weight: 100;
+        letter-spacing: 1px;
+    }   
 }
