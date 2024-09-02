@@ -4,7 +4,7 @@
 .site-header {
   background-color: rgb(18, 18, 18);
   background-color: $soil-brown;
-  border-bottom: 7px solid $turquoise-blue;
+  border-bottom: 3px solid $turquoise-blue;
   min-height: $spacing-unit * 1.865;
   z-index: 99999;
 
@@ -51,18 +51,31 @@
     display: none;
   }
 
-  #nav-cta {
-    background-color: lighten($brand-color, 5%);
+  #nav-cta, #nav-phone {
     padding: 0.5rem 1rem;
-    color: $soil-brown;
     border-radius: 5px;
     transition: color .3s ease;
     text-decoration: none;
+  }
+  #nav-cta {
+    background-color: lighten($brand-color, 5%);
+    color: $soil-brown;
     &:hover {
       background-color: lighten($brand-color, 10%);
     }
   }
-
+  #nav-phone {
+    background-color: $turquoise-blue;
+    color: $soil-brown;
+    &:hover {
+      background-color: darken($turquoise-blue, 10%);
+    }
+  }
+  @media only screen and (min-width: $on-palm) {
+    #nav-cta {
+      margin-right: 12px;
+    }
+  }
   @include media-query($on-palm) {
     position: absolute;
     top: 26px;

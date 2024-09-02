@@ -43,7 +43,8 @@ h2 {
     .page-link {
         letter-spacing: 1px;
         color: $brand-color;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        font-weight: 200;
     
         &:hover {
           color: white;
@@ -53,7 +54,7 @@ h2 {
     
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
-          margin-right: 30px;
+          margin-right: 25px;
         }
       }
 }
