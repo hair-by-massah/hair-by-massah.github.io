@@ -2,8 +2,19 @@
     padding-bottom: 0;
 }
 #hero-intro {
-    padding: 1rem 0 3rem;
+    padding: 1rem 0 5rem;
     min-height: 40vh;
+    &::before {
+        background-image: url(/images/zebra-bg.png);
+        opacity: .5;
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1
+    }    
 }
 #home-intro-pic {
     width: 100%;
@@ -67,7 +78,7 @@ button.thumb.slick-slide {
     background-color: #583f23;
     background: linear-gradient(
     to bottom,
-    #3f2d19 0%,   // darker top
+    #2a2014 0%,   // darker top
     #583f23 50%  // base color bottom
     );    
     padding: 3rem 0;
@@ -78,11 +89,12 @@ button.thumb.slick-slide {
 }
 
 #services-container {
+    padding-top: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: stretch; // equal height cards
     gap: 2rem;
-    margin: 1rem 2rem 5rem;
+    margin: 0 2rem 5rem;
 
     @media (max-width: 768px) {
         flex-direction: column; // stack vertically
@@ -199,6 +211,7 @@ button.thumb.slick-slide {
 .gallery {
     max-width: 90%;
     margin: 0 auto;
+    padding-top: 1rem;
 }
 
 .slider-nav .slick-slide {
