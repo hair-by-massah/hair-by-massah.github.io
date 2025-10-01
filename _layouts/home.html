@@ -2,11 +2,142 @@
 layout: default-home
 ---
 
-<div>
-  {%- if page.title -%}
+  <div id="hero-intro">
+    {%- if page.title -%}
     <h1 class="page-heading wrapper">{{ page.title }}</h1>
-  {%- endif -%}
+    {%- endif -%}
+  
+    {{ content }}
+  
+    <div class="gallery">
+      <!-- Slideable thumbnail carousel ONLY -->
+      <div class="slider-nav" aria-label="Gallery thumbnails">
+        <!-- Use buttons (not links) so nothing navigates away -->
+        <button class="thumb" type="button" data-full="/images/braids_1.jpg">
+          <img src="/images/braids_1.jpg" alt="Style 1">
+        </button>
+        <button class="thumb" type="button" data-full="/images/braids_2.jpg">
+          <img src="/images/braids_2.jpg" alt="Style 2">
+        </button>
+        <button class="thumb" type="button" data-full="/images/braids_1.jpg">
+          <img src="/images/braids_1.jpg" alt="Style 3">
+        </button>
+        <button class="thumb" type="button" data-full="/images/braids_2.jpg">
+          <img src="/images/braids_2.jpg" alt="Style 4">
+        </button>
+        <button class="thumb" type="button" data-full="/images/braids_1.jpg">
+          <img src="/images/braids_1.jpg" alt="Style 3">
+        </button>
+        <button class="thumb" type="button" data-full="/images/braids_2.jpg">
+          <img src="/images/braids_2.jpg" alt="Style 4">
+        </button>
+        <button class="thumb" type="button" data-full="/images/braids_1.jpg">
+          <img src="/images/braids_1.jpg" alt="Style 3">
+        </button>
+        <button class="thumb" type="button" data-full="/images/braids_2.jpg">
+          <img src="/images/braids_2.jpg" alt="Style 4">
+        </button>
+        <button class="thumb" type="button" data-full="/images/braids_1.jpg">
+          <img src="/images/braids_1.jpg" alt="Style 3">
+        </button>
+        <button class="thumb" type="button" data-full="/images/braids_2.jpg">
+          <img src="/images/braids_2.jpg" alt="Style 4">
+        </button>
+      </div>
+    </div> <!-- End .gallery -->
+  </div> <!-- End #hero-intro -->
 
-  {{ content }}
+  <div id="services-and-pricing">
+    <h2 class="homepage-section-header">Hair Services & Starting Prices</h2>
+    <section id="services-container" class="homepage-section">
+      <div class="services-section">
+        <h2 class="service-title">Hair Braiding</h2>
+        <hr class="divider">
+        <div class="services">
+          <div class="service">
+            <h3 class="service-name">Cornrows</h3>
+            <ul>
+              <li>Start at $90 (added hair) / $60 (no added hair)</li>
+            </ul>
+          </div>
+    
+          <div class="service">
+            <h3 class="service-name">Individual Braids</h3>
+            <ul>
+              <li>Large... $100+ // Medium... $150+ // Small or Micro... $250</li>
+              <li>Goddess Braids (not crochet)... $150+</li>
+            </ul>
+          </div>
+    
+          <div class="service">
+            <h3 class="service-name">Crochet</h3>
+            <ul>
+              <li>All crochet styles... $150 and up</li>
+            </ul>
+          </div>
+        </div>
+    
+        <a href="#calendly-embed" class="btn">Book an Appointment</a>
+      </div>
+      <div class="services-section">
+        <h2 class="service-title">Twists and Locs</h2>
+        <hr class="divider">
+        <div class="services">
+          <div class="service">
+            <h3 class="service-name">Kinky Twists or Comb Twists</h3>
+            <ul>
+              <li>$125 and up</li>
+            </ul>
+          </div>
+    
+          <div class="service">
+            <h3 class="service-name">Faux Locs</h3>
+            <ul>
+              <li>$150 and up</li>
+            </ul>
+          </div>
+    
+          <div class="service">
+            <h3 class="service-name">Dreadlocks</h3>
+            <ul>
+              <li>Touch up... $80 and up</li>
+              <li>Consultation + New Installation... $125 and up</li>
+            </ul>
+          </div>
+        </div>
+    
+        <a href="#calendly-embed" class="btn">Book an Appointment</a>
+      </div>
+      <div class="services-section">
+        <h2 class="service-title">Weaves</h2>
+        <hr class="divider">
+        <div class="services">
+          <div class="service">
+            <h3 class="service-name">Sew-in Wig</h3>
+            <ul>
+              <li>$100 and up</li>
+            </ul>
+          </div>
+    
+          <div class="service">
+            <h3 class="service-name">Sew-in Weave (tracks)</h3>
+            <ul>
+              <li>$150 and up</li>
+            </ul>
+          </div>
+        </div>
+    
+    
+        <a href="#calendly-embed" class="btn">Book an Appointment</a>
+      </div>
+    </section>
+  </div>
 
-</div>
+<section id="appointment-section" class="homepage-section">
+  <h2 class="homepage-section-header">Book an Appointment</h2>
+  <p class="appointment-text">Ready to transform your look? Booking an appointment with Massah is easy and convenient. Use the calendar below to schedule your next hair braiding session. We look forward to helping you achieve your desired style!</p>
+  <!-- Calendly inline widget begin -->
+  <div class="calendly-inline-widget" data-url="https://calendly.com/hairbymassah/hairappointment" style="min-width:320px;height:630px;" id="calendly-embed"></div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <!-- Calendly inline widget end -->
+</section>

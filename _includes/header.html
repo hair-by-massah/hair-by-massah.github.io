@@ -12,13 +12,14 @@
           <span class="navicon"></span>
         </label>
         <div class="trigger">
-          {%- for path in page_paths -%}
+          <!-- {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
             {%- if my_page.menu_title -%}
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.menu_title | escape }}</a>
             {%- endif -%}
-          {%- endfor -%}
-            <a class="page-link" href="#contact-cta" id="nav-cta">Book Now</a>
+          {%- endfor -%} -->
+            <a class="page-link" href="#services-and-pricing">Hair Services</a>
+            <a class="page-link" href="#calendly-embed" id="nav-cta">Book Now</a>
             <a class="page-link" href="tel:+1-360-901-2660" id="nav-phone">360.901.2660</a>
         </div>
       </nav>

@@ -1,105 +1,220 @@
 #homepage {
     padding-bottom: 0;
 }
-
-#home-intro-section {
-    display: flex;
-    flex-wrap: wrap;
+#hero-intro {
+    padding: 1rem 0 3rem;
+    min-height: 40vh;
 }
 #home-intro-pic {
     width: 100%;
+
     img {
         border-radius: 5px;
         width: 100%;
     }
 }
 
-/** Offerings **/ 
-#home-offerings-section {
-    position: relative;
-    background-image: url(/images/offerings_bg_mobile.jpg); 
-    background-attachment: fixed;
-    &::before {
-        content: '';
-        display: block;
-        background-color: darken($brand-gray, 10%);
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        opacity: .6;
-        z-index: 1;
-    }
-    @media only screen and (min-width: 1200px) {
-        background-image: url(/images/offerings_bg_desktop.jpg); 
-    }
-    margin-top: 4rem;
-    padding: 7rem 0 6rem;
-    h2 {
-        z-index: 100;
-        position: relative;
-        text-align: center;
-        color: $brand-color;
-        font-size: 2.5rem;     
-        @media only screen and (min-width: 600px) {
-            font-size: 3rem;     
-        }
+h1.page-heading.wrapper {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/** Slider **/
+button.thumb.slick-slide {
+    padding: 0 .5em;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.slick-arrow {
+    background-color: black !important;
+    color: white !important;
+    height: 30px !important;
+    width: 30px !important;
+    border-radius: 20px;
+}
+
+.slick-prev,
+.slick-next {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    &:before {
+        position: relative !important;
+        top: 2px !important;
+        font-size: 1.5rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 }
-#offerings {
-    position: relative;
-    z-index: 100;
-    padding: 1rem;
-    @media only screen and (min-width: 600px) {
-        max-width: 80%;
+
+/** Fancybox **/
+.fancybox__container {
+    z-index: 999999 !important;
+}
+
+.homepage-section-header {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 2.5rem;
+}
+/** Services Section **/
+
+#services-and-pricing {
+    background-color: #583f23;
+    background: linear-gradient(
+    to bottom,
+    #3f2d19 0%,   // darker top
+    #583f23 50%  // base color bottom
+    );    
+    padding: 3rem 0;
+    > h2 {
+        color: #dfd3d3;
+        letter-spacing: 2px;
     }
-    @media only screen and (min-width: 1200px) {
-        max-width: 1200px;
-        padding: 2rem 3rem 3rem;
-    }
+}
+
+#services-container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    &.wrapper {
-        &::after {
-            display: none;
+    align-items: stretch; // equal height cards
+    gap: 2rem;
+    margin: 1rem 2rem 5rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column; // stack vertically
+    }
+}
+
+.services-section {
+    background: #fff;
+    padding: 2rem;
+    font-family: sans-serif;
+    border: 3px solid lighten($brand-color, 15%);
+    border-radius: 7px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+    .services-title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .divider {
+        width: 100%;
+        border: none;
+        height: 12px; // adjust triangle height
+        margin: 0 0 2rem;
+        background-image:
+            linear-gradient(45deg, transparent 50%, #c49a6c 50%),
+            linear-gradient(-45deg, transparent 50%, #c49a6c 50%);
+        background-size: 12px 12px;
+        background-position: 0 100%;
+        background-repeat: repeat-x;
+    }
+
+    .services {
+        margin-bottom: 2rem;
+
+        .service {
+            margin: 0 0 .5rem;
+
+            .service-name {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+
+            ul {
+                padding: 0;
+                margin: 0;
+
+                li {
+                    font-size: 1.1rem;
+                    line-height: 1.4;
+                    margin-bottom: 0.2rem;
+                    margin-left: 1.5rem;
+                }
+            }
+        }
+
+    }
+    .btn {
+        display: inline-block;
+        background: #c49a6c; // gold/brown accent
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 4px;
+        transition: background 0.3s;
+        margin-top: auto; // pins button to bottom
+        align-self: center; // left aligned by default
+
+        &:hover {
+            background: #a87f54;
         }
     }
 }
-.offering-card {
+
+
+#appointment-section {
+  background: #f4eee7; // soft cream-beige background
+  border-top: 6px solid #c49a6c; // gold accent divider
+  padding: 4rem 1rem 8rem;
+  text-align: center;
+  font-family: sans-serif;
+
+  .homepage-section-header {
+    color: #3b2a23; // deep brown
+    margin-bottom: 1rem;
+  }
+
+  .appointment-text {
+    max-width: 650px;
+    margin: 0 auto 2rem;
     font-size: 1.2rem;
-    box-sizing: border-box;
-    padding: 2rem;
-    @media only screen and (min-width: 1200px) {
-        padding: 3rem 2rem;
-    }    
-    border-radius: 5px;
-    border: 1px solid gray;
-    background-color: lighten($brand-color, 20%);
-    h3 {
-        @media only screen and (min-width: 1200px) {
-            font-size: 1.7rem;
-            margin-bottom: 1.25rem;
-        }          
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 1.4rem;
-        color: #080705;
-        line-height: 1;
-    }
-    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #4a3a33;
+  }
+
+  .calendly-inline-widget {
+    background: #fff; // keeps Calendly clean inside
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
 }
-@media only screen and (min-width: 1000px) {
-    #home-intro-text {
-        padding: 0 0 0 2rem;
-        flex: 1;
-    }
-    #home-intro-pic {
-        max-width: 300px;
-    }
-    .offering-card {
-        flex: 1;
-        max-width: 32%;
-        margin-bottom: 0;
-    }        
+
+// Slider
+.gallery {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.slider-nav .slick-slide {
+    padding: 6px;
+}
+
+.slider-nav .thumb {
+    display: block;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
+.slider-nav img {
+    width: 90%;
+    display: block;
+    border-radius: 4px;
 }
