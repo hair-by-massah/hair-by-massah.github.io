@@ -2,7 +2,7 @@
     padding-bottom: 0;
 }
 #hero-intro {
-    padding: 1rem 0 5rem;
+    padding: 1rem 0 7rem;
     min-height: 40vh;
     &::before {
         background-image: url(/images/zebra-bg.png);
@@ -31,12 +31,6 @@ h1.page-heading.wrapper {
 }
 
 /** Slider **/
-button.thumb.slick-slide {
-    padding: 0 .5em;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
 
 .slick-arrow {
     background-color: black !important;
@@ -61,6 +55,43 @@ button.thumb.slick-slide {
         justify-content: center !important;
     }
 }
+
+.gallery {
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 1rem;
+
+    .slider-nav {
+        padding: 6px;
+    button.thumb.slick-slide {
+        padding: 5px .5em 0;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+        .thumb {
+            display: block;
+            padding: 0;
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+        }
+        
+        img {
+            border-radius: 200px;
+            width: 90%;
+            display: block;
+                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 14px rgba(0, 0, 0, 0.08);
+            }
+        
+        }
+    }
+}
+
 
 /** Fancybox **/
 .fancybox__container {
@@ -205,29 +236,4 @@ button.thumb.slick-slide {
     margin: 0 auto;
     padding: 1rem;
   }
-}
-
-// Slider
-.gallery {
-    max-width: 90%;
-    margin: 0 auto;
-    padding-top: 1rem;
-}
-
-.slider-nav .slick-slide {
-    padding: 6px;
-}
-
-.slider-nav .thumb {
-    display: block;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    cursor: pointer;
-}
-
-.slider-nav img {
-    width: 90%;
-    display: block;
-    border-radius: 4px;
 }
