@@ -4,7 +4,11 @@ body {
 #homepage {
     padding-bottom: 0;
 }
+.page-content {
+    padding: 0;
+}
 #hero-intro {
+    position: relative;
     padding: 1rem 0 7rem;
     min-height: 40vh;
     &::before {
@@ -30,8 +34,9 @@ body {
 
 h1.page-heading.wrapper {
     text-align: center;
+    margin-top: 3rem;
     @media only screen and (min-width: 1024px) {
-        margin-top: 3rem;
+        margin-top: 5rem;
     }
 }
 h1.page-heading {
