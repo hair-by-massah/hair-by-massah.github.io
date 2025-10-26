@@ -21,7 +21,8 @@
 title: M'assah African Hair Braiding
 email: hairbymassah@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Massah provides stunning African Hair Braiding services in the Vancouver, WA and Portland OR Metro area. 
+  Massah provides stunning African American hair braiding crochet, weaves, and extensions in the Vancouver, WA and Portland OR Metro area.
+  
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.hairbymassah.com/" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
