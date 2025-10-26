@@ -30,7 +30,14 @@ body {
 
 h1.page-heading.wrapper {
     text-align: center;
-    margin-top: 3rem;
+    @media only screen and (min-width: 1024px) {
+        margin-top: 3rem;
+    }
+}
+h1.page-heading {
+    @media only screen and (max-width: 768px) {
+        font-size: 2.4rem;
+    }
 }
 
 /** Slider **/
