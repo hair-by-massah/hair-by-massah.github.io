@@ -58,6 +58,14 @@ h1.page-heading.wrapper {
         justify-content: center !important;
     }
 }
+@media only screen and (max-width: 768px) {
+    .slick-prev {
+        left: -10px !important;
+    }
+    .slick-next {
+        right: -10px !important;
+    }
+}
 
 .gallery {
     max-width: 90%;
